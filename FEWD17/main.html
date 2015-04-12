@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FEWD17</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="site">
+      <section class="members">
+        <header>
+          <h3>FEWD17 Members</h3>
+        </header>
+        <ul data-ui="github-me-page"></ul>
+      </section>
+    </div>
+    <script>
+      var _log = console.log.bind(console);
+
+      var members       = [
+          {"github": "amenie"}
+        ]
+        , $githubMePage = $('[data-ui=github-me-page]');
+
+      var defaultGithubDetails = {
+        "repo"     : "ga",
+        "pagename" : "me.html",
+        "role"     : "students"
+      };
+
+      var fetchMePage = function(account){
+        var account = $.extend(defaultGithubDetails, account);
+        return $.get("https://"+account.github+".github.io/"+account.repo+"/"+account.pagename);
+      }
+
+      var insertContent = function(content){
+        $githubMePage.append('<li>'+content+"</li>");
+      }
+
+      $.each(members, function(index, member){
+        fetchMePage(member).then(insertContent);
+      });
+
+    </script>
+  </body>
+</html>
