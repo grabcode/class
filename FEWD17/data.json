@@ -2,6 +2,19 @@
   "members": [
     {"github":"percival1978", "role": "TA"},
     {"github":"itadsign", "role": "student"},
-    {"github":"cminikus", "role": "student"}
+    {"github":"minikus", "role": "student"},
+    {"github":"courthully", "role": "student"},
+    {"github":"gemsmidz", "role": "student"},
+    {"github":"lackers1985", "role": "student"},
+    {"github":"danielnovak0610", "role": "student"},
+    {"github":"blinky13", "role": "student"},
+    {"github":"beth88", "role": "student"},
+    {"github":"williamhwright", "role": "student"},
+    {"github":"giagraphics", "role": "student"},
+    {"github":"ividerivi", "role": "student"},
+    {"github":"mmuljadi", "role": "student"},
+    {"github":"danielarytova", "role": "student"},
+    {"github":"jenniebee", "role": "student"},
+    {"github":"gititgirl", "role": "student"}
   ]
 }
