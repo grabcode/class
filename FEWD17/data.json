@@ -1,5 +1,7 @@
 {
   "members": [
-    {"github":"amenie", "role": "test"} 
+    {"github":"percival1978", "role": "TA"},
+    {"github":"itadsign", "role": "student"},
+    {"github":"cminikus", "role": "student"}
   ]
 }
