@@ -71,3 +71,9 @@ section{
     transform: rotate(360deg);
   }
 }
+
+.alert-warning{
+  background-color: #fff6d9;
+  border-color: #ffe9ca;
+  color: #737373;
+}

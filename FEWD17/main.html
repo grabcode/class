@@ -40,7 +40,7 @@
       }
 
       var insertContent = function(content){
-        $githubMePage.find('li.loading:eq(0)').removeClass('loading').html(content);
+        return $githubMePage.find('li.loading:eq(0)').removeClass('loading').html(content)
       }
 
       var dataReady = function(data){
@@ -51,7 +51,11 @@
         $githubMePage.append(lis);
 
         $.each(data.members, function(index, member){
-          fetchMePage(member).then(insertContent);
+          fetchMePage(member)
+          .success(insertContent)
+          .fail(function(error){
+            insertContent('Failed to load '+member.github+'<br><br>'+JSON.stringify(error)).addClass('alert-warning');
+          });
         });
       }
 
